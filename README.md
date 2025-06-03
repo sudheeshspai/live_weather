@@ -1,63 +1,95 @@
-# 🌤️ Flask Weather App
+# 🌤️ Weather App
 
-A simple, elegant Flask web application to check current weather conditions for any city worldwide using the [Weatherbit.io API](https://www.weatherbit.io/).  
-Additionally, it displays the global average temperature based on selected major cities and limits each user to 3 weather queries per session to prevent abuse.
+A simple Flask-based weather application that allows users to check the weather for a specific city and displays the global average temperature. The app uses the Weatherbit API for fetching weather data.
 
 ---
 
 ## Features
 
-- **User session support:** Enter your name to start and track usage limits.
-- **Weather queries:** Ask for the weather of any city with a natural language style input like `"weather in Mumbai"`.
-- **Global average temperature:** Shows the current average temperature for a fixed set of cities globally.
-- **Usage limit:** Each user can query weather data up to 3 times per session.
-- **Reset usage:** Easily reset your query count without logging out.
-- **Logout:** Clear session and start fresh.
-- **Beautiful UI:** Clean, modern design with floating weather emoji background and responsive layout.
+- 🌍 Displays the **global average temperature**.
+- 🌤️ Allows users to query the weather for specific cities.
+- 🔒 Session-based user management with a query limit (3 queries per session).
+- 🎨 Beautiful and responsive UI with floating weather emojis.
 
 ---
 
-## Getting Started
+## Project Structure
 
-### Prerequisites
+```
+weather/
+├── app.py                # Main Flask application
+├── .env                  # Environment variables (e.g., API keys)
+├── templates/            # HTML templates (if used separately)
+├── static/               # Static files (CSS, JS, images)
+└── README.md             # Project documentation
+```
 
-- Python 3.7+
-- `pip` package manager
-- Weatherbit API Key — get a free API key from [Weatherbit.io](https://www.weatherbit.io/account/create)
+---
 
-### Installation
+## Prerequisites
 
-1. **Clone the repository:**
+- Python 3.7 or higher
+- Flask
+- Requests
+- python-dotenv
 
+---
+
+## Setup Instructions
+
+1. Clone the repository:
    ```bash
-   git clone https://github.com/sudheeshspai/live_weather                    
-   cd live_weather/weather
-2. Create and activate a virtual environment (optional but recommended):
-      
-   ```bash                                        
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate 
-
-3. Install dependencies:
-     ```bash
-     pip install -r requirements.txt
-
-### ⚠️ Important: Create Your `.env` File
-
-Create a `.env` file in the **project root** directory and add your Weatherbit API key exactly as shown below.  
-**This step is essential** — without the API key, the app **will not work**.
-
-  ```ini
-     WEATHERBIT_API_KEY=your_weatherbit_api_key_here
+   git clone https://github.com/your-username/weather-app.git
+   cd weather-app
    ```
-### Run the app
 
+2. Install dependencies:
    ```bash
-    python app.py
-```
-### Open your browser and visit
-  ```cpp
-     http://127.0.0.1:5000/
-```
+   pip install -r requirements.txt
+   ```
+
+3. Create a `.env` file in the root directory and add your Weatherbit API key:
+   ```
+   WEATHERBIT_API_KEY=your_api_key_here
+   ```
+
+4. Run the application:
+   ```bash
+   python app.py
+   ```
+
+5. Open your browser and navigate to:
+   ```
+   http://127.0.0.1:5000/
+   ```
+
+---
+
+## Usage
+
+1. Enter your name to start the session.
+2. Query the weather by typing phrases like:
+   ```
+   weather in Mumbai
+   ```
+3. View the global average temperature and weather details for the queried city.
+4. Reset your query limit or log out as needed.
+
+---
+## API Reference
+
+This app uses the [Weatherbit API](https://www.weatherbit.io/) to fetch weather data. Ensure you have a valid API key.
+
+---
+
 ## License
-### MIT License © 2025 sudheesh_s_pai
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+## Acknowledgments
+
+- [Flask](https://flask.palletsprojects.com/) - Python web framework
+- [Weatherbit API](https://www.weatherbit.io/) - Weather data provider
+- UI inspiration from modern web design trends
