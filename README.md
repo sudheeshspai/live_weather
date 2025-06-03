@@ -31,8 +31,7 @@ Additionally, it displays the global average temperature based on selected major
 
    ```bash
    git clone https://github.com/sudheeshspai/live_weather                    
-  
-   cd live_weather
+   cd live_weather/weather
 2. Create and activate a virtual environment (optional but recommended):
       
    ```bash                                        
